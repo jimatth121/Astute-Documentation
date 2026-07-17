@@ -15,7 +15,9 @@ export const NAV: NavSection[] = [
     items: [
       { label: "What is Astute?", slug: "", icon: "home", keywords: "intro home overview start" },
       { label: "How it works", slug: "how-it-works", icon: "route", keywords: "journey findable fundable flow big picture" },
-      { label: "Trust levels & badges", slug: "trust-levels", icon: "shield", keywords: "basic verified trusted institutional badge unlock" },
+      // Trust levels & badges — temporarily hidden
+      // { label: "Trust levels & badges", slug: "trust-levels", icon: "shield", keywords: "basic verified trusted institutional badge unlock" },
+      { label: "Glossary", slug: "glossary", icon: "book", keywords: "glossary terms definitions dictionary a-z meaning vocabulary jargon" },
       { label: "Your readiness score", slug: "readiness-score", icon: "gauge", keywords: "0-100 tasks score fundable improve" },
     ],
   },

@@ -526,7 +526,7 @@ export function UsingAssistant() {
       <H2 id="ask">What to ask</H2>
       <CardGrid cols={2}>
         <DocCard icon="gauge" title="“What should I do next?”" desc="It reads your readiness and tells you the highest-impact task to tackle now." to="/readiness-score" />
-        <DocCard icon="shield" title="“How do I reach TRUSTED?”" desc="It explains exactly which checks remain for your role." to="/trust-levels" />
+        <DocCard icon="shield" title="“What checks do I still need?”" desc="It explains exactly which verification steps remain for your role." to="/using/verification" />
         <DocCard icon="file" title="“Which documents do I need?”" desc="It lists exactly what's expected for your role." to="/using/documents" />
         <DocCard icon="sparkles" title="“Why did I get this match?”" desc="It explains how matching works and what improves your ranking." to="/using/matches" />
       </CardGrid>

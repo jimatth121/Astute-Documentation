@@ -26,6 +26,7 @@ Press <kbd>⌘K</kbd> anywhere to search.
 | **Welcome** | What is Astute? · How it works · Trust levels & badges · Your readiness score |
 | **Guides by role** | Fund-seeker · Investor · Investment firm · Lender · Broker (coming soon) |
 | **Using Astute** | Getting verified · Astute Assistant (AI chatbot) · Matches & interest · Deal rooms · Your documents · Alerts & settings · Plans & billing |
+| **Reference** | Glossary — a searchable A–Z of every term on the platform |
 | **Developer** | Dev docs — a light technical orientation |
 
 ## Interactive & visual elements
@@ -33,6 +34,10 @@ Press <kbd>⌘K</kbd> anywhere to search.
 - **Role journey flow diagrams** — a real, colour-coded flowchart of each role's path from
   sign-up to closing a deal, with the trust badge unlocked at each stage.
 - **Readiness score simulator** — tick tasks and watch the 0–100 score and tier climb.
+- **Interactive glossary** — a searchable A–Z of every term, filterable by module
+  (Investor / Firm / Lender / Admin), with live prefix-highlighting, a clickable letter index that
+  jumps to the section, scroll-spy, and `/` to focus search. Available as its own **Glossary**
+  module and embedded per-role on the Investor, Firm and Lender guides.
 - **Trust ladder** — click through BASIC → VERIFIED → TRUSTED → INSTITUTIONAL.
 - **Astute Assistant page** — a static preview of the in-app AI chatbot (live-typed answers,
   action buttons, an AI-credits meter) with guidance on what to ask and who can use it.

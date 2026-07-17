@@ -2,6 +2,8 @@ import { DocPage } from "../components/Layout";
 import { Callout, H2, Helpful, Pill, Divider, CardGrid, DocCard } from "../components/doc";
 import { Split } from "../components/flow";
 import { JourneyExplorer } from "../components/journey";
+import { Glossary } from "../components/Glossary";
+import { INVESTOR_TERMS, FIRM_TERMS, LENDER_TERMS } from "../data/glossary";
 import { Link } from "react-router-dom";
 import { Icon } from "../components/Icon";
 
@@ -120,6 +122,7 @@ export function Investor() {
         { id: "you", label: "Is this you?" },
         { id: "journey", label: "Your journey" },
         { id: "screens", label: "Your screens" },
+        { id: "glossary", label: "Investor glossary" },
       ]}
     >
       <RoleHero
@@ -163,6 +166,10 @@ export function Investor() {
         your thesis. It's shown clearly before you commit.
       </Callout>
 
+      <H2 id="glossary">Investor glossary</H2>
+      <p>Every term you'll meet as an investor — search by word or jump to a letter.</p>
+      <Glossary terms={INVESTOR_TERMS} />
+
       <Helpful />
     </DocPage>
   );
@@ -179,6 +186,7 @@ export function Firm() {
         { id: "journey", label: "Your journey" },
         { id: "team", label: "Working as a team" },
         { id: "screens", label: "Your screens" },
+        { id: "glossary", label: "Firm glossary" },
       ]}
     >
       <RoleHero
@@ -230,6 +238,10 @@ export function Firm() {
         set a password, and you'll land straight in the firm's dashboard.
       </Callout>
 
+      <H2 id="glossary">Firm glossary</H2>
+      <p>The terms that show up across the investment-firm experience, from AUM to voting rights.</p>
+      <Glossary terms={FIRM_TERMS} />
+
       <Helpful />
     </DocPage>
   );
@@ -245,6 +257,7 @@ export function Lender() {
         { id: "you", label: "Is this you?" },
         { id: "journey", label: "Your journey" },
         { id: "screens", label: "Your screens" },
+        { id: "glossary", label: "Lender glossary" },
       ]}
     >
       <RoleHero
@@ -283,6 +296,10 @@ export function Lender() {
         <DocCard icon="chart" title="Portfolio" desc="Capital deployed and interest earned." to="/roles/lender" />
         <DocCard icon="credit-card" title="Subscription" desc="Your plan and billing." to="/using/billing" />
       </CardGrid>
+
+      <H2 id="glossary">Lender glossary</H2>
+      <p>The terms you'll meet as a lender — collateral types, credit ratings, funding structures and more.</p>
+      <Glossary terms={LENDER_TERMS} />
 
       <Helpful />
     </DocPage>

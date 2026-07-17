@@ -113,7 +113,7 @@ export function Overview() {
       <Reveal>
         <CardGrid cols={3}>
           <DocCard icon="route" title="How it works" desc="The whole journey, start to finish." to="/how-it-works" />
-          <DocCard icon="shield" title="Trust levels" desc="How badges unlock features." to="/trust-levels" />
+          <DocCard icon="book" title="Glossary" desc="Every term on the platform, A–Z." to="/glossary" />
           <DocCard icon="gauge" title="Readiness score" desc="Get investment-ready, step by step." to="/readiness-score" />
         </CardGrid>
       </Reveal>

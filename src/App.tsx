@@ -3,7 +3,7 @@ import { Layout } from "./components/Layout";
 import {
   Overview,
   HowItWorks,
-  TrustLevels,
+  // TrustLevels, // Trust levels & badges — temporarily hidden
   ReadinessScore,
 } from "./pages/Welcome";
 import { FundSeeker, Investor, Firm, Lender, Broker } from "./pages/Roles";
@@ -17,6 +17,7 @@ import {
   UsingAssistant,
 } from "./pages/Using";
 import { DevDocs } from "./pages/DevDocs";
+import { GlossaryPage } from "./pages/Glossary";
 
 export function App() {
   return (
@@ -24,7 +25,7 @@ export function App() {
       <Routes>
         <Route path="/" element={<Overview />} />
         <Route path="/how-it-works" element={<HowItWorks />} />
-        <Route path="/trust-levels" element={<TrustLevels />} />
+        {/* <Route path="/trust-levels" element={<TrustLevels />} /> */}
         <Route path="/readiness-score" element={<ReadinessScore />} />
 
         <Route path="/roles/fund-seeker" element={<FundSeeker />} />
@@ -40,6 +41,8 @@ export function App() {
         <Route path="/using/documents" element={<UsingDocuments />} />
         <Route path="/using/notifications" element={<UsingNotifications />} />
         <Route path="/using/billing" element={<UsingBilling />} />
+
+        <Route path="/glossary" element={<GlossaryPage />} />
 
         <Route path="/dev-docs" element={<DevDocs />} />
 
