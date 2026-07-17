@@ -82,7 +82,7 @@ export function Layout({ children }: { children: ReactNode }) {
       <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden before:absolute before:-left-[120px] before:-top-[220px] before:h-[620px] before:w-[620px] before:rounded-full before:bg-[radial-gradient(circle,rgba(1,183,171,0.22),transparent_70%)] before:opacity-50 before:blur-[120px] before:content-[''] after:absolute after:-right-[180px] after:top-[30%] after:h-[560px] after:w-[560px] after:rounded-full after:bg-[radial-gradient(circle,rgba(124,121,184,0.18),transparent_70%)] after:opacity-50 after:blur-[120px] after:content-[''] light:before:opacity-[0.35] light:after:opacity-[0.35]" />
       <header className="sticky top-0 z-50 flex h-16 items-center gap-[18px] border-b border-line bg-[color-mix(in_srgb,var(--dark-bg)_78%,transparent)] px-[22px] backdrop-blur-[14px]">
         <button
-          className={`${tbBtn} ${tbIcon} hidden max-[900px]:inline-flex`}
+          className="hidden h-[38px] w-[38px] cursor-pointer items-center justify-center rounded-[10px] border border-line bg-surface text-txt-muted transition-all duration-150 hover:border-line-strong hover:bg-surface-strong hover:text-txt-bright max-[900px]:flex"
           onClick={() => setMobileOpen((o) => !o)}
           aria-label="Menu"
         >
@@ -121,29 +121,19 @@ export function Layout({ children }: { children: ReactNode }) {
           <button className={`${tbBtn} border-primary/30 bg-selected text-primary`} onClick={() => setPaletteOpen(true)}>
             <Icon name="sparkles" size={15} /> Ask
           </button>
-          <a
-            className={`${tbBtn} ${tbIcon}`}
-            href="https://staging-api.astuteapp.io"
-            target="_blank"
-            rel="noreferrer"
-            title="Staging API"
-          >
-            <Icon name="external" size={16} />
-          </a>
           <button className={`${tbBtn} ${tbIcon}`} onClick={toggle} title="Toggle theme">
             <Icon name={light ? "moon" : "sun"} size={16} />
           </button>
         </div>
       </header>
 
-      <div
-        className={`fixed inset-x-0 bottom-0 top-16 z-[44] bg-black/50 backdrop-blur-[2px] ${
-          mobileOpen ? "max-[900px]:block" : "hidden"
-        }`}
-        onClick={() => setMobileOpen(false)}
-      />
-
       <div className="relative z-[1] mx-auto flex max-w-[1600px]">
+        <div
+          className={`fixed inset-x-0 bottom-0 top-16 z-[44] bg-black/50 backdrop-blur-[2px] ${
+            mobileOpen ? "max-[900px]:block" : "hidden"
+          }`}
+          onClick={() => setMobileOpen(false)}
+        />
         <aside
           className={`sticky top-16 h-[calc(100vh-64px)] w-72 shrink-0 overflow-y-auto border-r border-line pb-[60px] pl-[22px] pr-3.5 pt-[22px] max-[900px]:fixed max-[900px]:left-0 max-[900px]:top-16 max-[900px]:z-[45] max-[900px]:bg-canvas max-[900px]:shadow-[20px_0_60px_rgba(0,0,0,0.5)] max-[900px]:transition-transform max-[900px]:duration-[250ms] ${
             mobileOpen ? "max-[900px]:translate-x-0" : "max-[900px]:-translate-x-[105%]"
