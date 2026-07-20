@@ -7,6 +7,7 @@ import {
   ReadinessScore,
 } from "./pages/Welcome";
 import { FundSeeker, Investor, Firm, Lender, Broker } from "./pages/Roles";
+import { FundingRequests, AiCapabilities, AdminGuide, FeatureStatus } from "./pages/PlatformGuide";
 import {
   UsingVerification,
   UsingMatches,
@@ -33,8 +34,11 @@ export function App() {
         <Route path="/roles/firm" element={<Firm />} />
         <Route path="/roles/lender" element={<Lender />} />
         <Route path="/roles/broker" element={<Broker />} />
+        <Route path="/roles/admin" element={<AdminGuide />} />
 
         <Route path="/using/verification" element={<UsingVerification />} />
+        <Route path="/using/funding-requests" element={<FundingRequests />} />
+        <Route path="/using/ai" element={<AiCapabilities />} />
         <Route path="/using/assistant" element={<UsingAssistant />} />
         <Route path="/using/matches" element={<UsingMatches />} />
         <Route path="/using/deal-rooms" element={<UsingDealRooms />} />
@@ -43,6 +47,7 @@ export function App() {
         <Route path="/using/billing" element={<UsingBilling />} />
 
         <Route path="/glossary" element={<GlossaryPage />} />
+        <Route path="/feature-status" element={<FeatureStatus />} />
 
         <Route path="/dev-docs" element={<DevDocs />} />
 

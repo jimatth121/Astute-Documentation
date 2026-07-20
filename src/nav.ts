@@ -28,27 +28,35 @@ export const NAV: NavSection[] = [
       { label: "Investor", slug: "roles/investor", icon: "compass", keywords: "angel invest deals thesis" },
       { label: "Investment firm", slug: "roles/firm", icon: "briefcase", keywords: "vc fund team" },
       { label: "Lender", slug: "roles/lender", icon: "bank", keywords: "loan credit borrower" },
-      { label: "Broker", slug: "roles/broker", icon: "handshake", badge: "Soon", keywords: "intermediary clients" },
+      { label: "Broker", slug: "roles/broker", icon: "handshake", keywords: "intermediary clients representation portfolio marketplace" },
+      { label: "Platform admin", slug: "roles/admin", icon: "shield", keywords: "operations moderation verification billing audit feature flags" },
     ],
   },
   {
     heading: "Using Astute",
     items: [
       { label: "Getting verified", slug: "using/verification", icon: "user-check", keywords: "kyc id identity company checks unlock" },
+      { label: "Funding requests", slug: "using/funding-requests", icon: "file", keywords: "loan debt credit equity grant publish request" },
       { label: "Matches & interest", slug: "using/matches", icon: "sparkles", keywords: "match feed marketplace express interest" },
+      { label: "AI capabilities", slug: "using/ai", icon: "bot", keywords: "readiness next best action pitch matching document intelligence suggestions" },
       { label: "Astute Assistant", slug: "using/assistant", icon: "bot", keywords: "chatbot ai assistant chat help credits coach bot" },
       { label: "Deal rooms", slug: "using/deal-rooms", icon: "message", keywords: "chat documents milestones negotiate" },
       { label: "Your documents", slug: "using/documents", icon: "file", keywords: "vault upload pitch deck bank statement" },
       { label: "Alerts & settings", slug: "using/notifications", icon: "bell", keywords: "notifications email preferences profile" },
       { label: "Plans & billing", slug: "using/billing", icon: "credit-card", keywords: "subscription pay plan trial" },
+      // Feature availability is intentionally hidden from the public sidebar.
+      // The /feature-status route remains available for direct internal access.
+      // { label: "Feature availability", slug: "feature-status", icon: "layers", keywords: "live roadmap maturity switch partial dormant" },
     ],
   },
-  {
-    heading: "Developer",
-    items: [
-      { label: "Dev docs", slug: "dev-docs", icon: "code", keywords: "architecture stack tech next.js engineering build" },
-    ],
-  },
+  // Developer documentation is intentionally hidden from the public sidebar.
+  // The /dev-docs route remains available for direct internal access.
+  // {
+  //   heading: "Developer",
+  //   items: [
+  //     { label: "Dev docs", slug: "dev-docs", icon: "code", keywords: "documentation react vite typescript engineering build" },
+  //   ],
+  // },
 ];
 
 export const FLAT: (NavItem & { section: string })[] = NAV.flatMap((s) =>

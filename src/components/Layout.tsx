@@ -6,29 +6,8 @@ import { CommandPalette } from "./CommandPalette";
 import { SplashLoader, RouteLoader } from "./Loader";
 import logo from "../assets/logo.svg";
 
-function useTheme() {
-  const [light, setLight] = useState(false);
-  useEffect(() => {
-    const saved = localStorage.getItem("astute-docs-theme");
-    if (saved === "light") {
-      setLight(true);
-      document.documentElement.classList.add("light");
-    }
-  }, []);
-  const toggle = () => {
-    setLight((v) => {
-      const nv = !v;
-      document.documentElement.classList.toggle("light", nv);
-      localStorage.setItem("astute-docs-theme", nv ? "light" : "dark");
-      return nv;
-    });
-  };
-  return { light, toggle };
-}
-
 const tbBtn =
   "inline-flex h-[38px] cursor-pointer items-center gap-[7px] rounded-[10px] border border-line bg-surface px-[13px] text-[13.5px] font-semibold text-txt-muted transition-all duration-150 hover:border-line-strong hover:bg-surface-strong hover:text-txt-bright";
-const tbIcon = "w-[38px] justify-center px-0";
 
 export function Layout({ children }: { children: ReactNode }) {
   const loc = useLocation();
@@ -38,7 +17,13 @@ export function Layout({ children }: { children: ReactNode }) {
   const [splash, setSplash] = useState<"show" | "fade" | "gone">("show");
   const [navLoading, setNavLoading] = useState(false);
   const firstRender = useRef(true);
-  const { light, toggle } = useTheme();
+
+  // This guide is intentionally dark-only. Clear any preference saved by
+  // earlier versions so every visitor receives the same theme.
+  useEffect(() => {
+    document.documentElement.classList.remove("light");
+    localStorage.setItem("astute-docs-theme", "dark");
+  }, []);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -121,9 +106,11 @@ export function Layout({ children }: { children: ReactNode }) {
           <button className={`${tbBtn} border-primary/30 bg-selected text-primary`} onClick={() => setPaletteOpen(true)}>
             <Icon name="sparkles" size={15} /> Ask
           </button>
-          <button className={`${tbBtn} ${tbIcon}`} onClick={toggle} title="Toggle theme">
-            <Icon name={light ? "moon" : "sun"} size={16} />
+          {/* Theme toggle intentionally disabled: the documentation is dark-only.
+          <button className={`${tbBtn} w-[38px] justify-center px-0`} title="Toggle theme">
+            <Icon name="sun" size={16} />
           </button>
+          */}
         </div>
       </header>
 

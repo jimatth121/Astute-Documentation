@@ -1,9 +1,9 @@
 # Astute Guide — How to use the app
 
-An interactive, **end-user guide** for the AstuteApp platform (the `astute-fe` web app),
+An interactive, **end-user guide** for the AstuteApp platform,
 built as a standalone React + Vite site with the same dark theme as the product.
 
-This is written for the people who *use* Astute — fund-seekers, investors, lenders and firms —
+This is written for the people who *use* Astute — fund-seekers, investors, firms, lenders, brokers and platform administrators —
 not for engineers. It explains, in plain language and with visual flow diagrams, how to sign
 up, get verified, raise your readiness score, get matched, and close deals. A single **Dev docs**
 page at the end orients engineers; there is no API reference.
@@ -24,8 +24,8 @@ Press <kbd>⌘K</kbd> anywhere to search.
 | Section | Pages |
 |---|---|
 | **Welcome** | What is Astute? · How it works · Trust levels & badges · Your readiness score |
-| **Guides by role** | Fund-seeker · Investor · Investment firm · Lender · Broker (coming soon) |
-| **Using Astute** | Getting verified · Astute Assistant (AI chatbot) · Matches & interest · Deal rooms · Your documents · Alerts & settings · Plans & billing |
+| **Guides by role** | Fund-seeker · Investor · Investment firm · Lender · Broker · Platform admin |
+| **Using Astute** | Verification · Funding requests · Matching · AI capabilities · Assistant · Deal rooms · Documents · Alerts · Billing · Feature availability |
 | **Reference** | Glossary — a searchable A–Z of every term on the platform |
 | **Developer** | Dev docs — a light technical orientation |
 
@@ -48,10 +48,10 @@ Press <kbd>⌘K</kbd> anywhere to search.
 
 ## Design tokens
 
-Pulled directly from `astute-fe/src/theme/colors.ts` — primary `#01B7AB`, canvas `#03030D`,
+Aligned with the Astute product palette — primary `#01B7AB`, canvas `#03030D`,
 surfaces `#0B0B16` / `#111120`. Body font **Karla**; headings use **Space Grotesk** as a stand-in
 for the product's licensed **Dunbar**.
 
 ## Stack
 
-React 19 · TypeScript · Vite 6 · React Router 7 · hand-rolled CSS (no UI framework).
+React 19 · TypeScript · Vite 6 · React Router 7 · Tailwind CSS 4.

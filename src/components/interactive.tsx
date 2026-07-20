@@ -196,7 +196,7 @@ export function ReadinessSimulator() {
           </h4>
           <p className="m-0 text-[13.5px] text-txt-gray">
             Tick the AI-generated tasks to watch the score climb. At <strong>85+</strong> the
-            fund-seeker reaches TRUSTED and unlocks Deal Rooms &amp; Express Interest. The real score
+            fund-seeker improves their visible readiness and trust. VERIFIED unlocks matching and interest; the real score
             is computed server-side from these same signals.
           </p>
         </div>

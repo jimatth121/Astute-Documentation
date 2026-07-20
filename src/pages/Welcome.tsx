@@ -80,7 +80,7 @@ export function Overview() {
         <DocCard icon="compass" title="Investor" desc="An individual angel deploying your own capital." to="/roles/investor" />
         <DocCard icon="briefcase" title="Investment firm" desc="A VC or fund investing on behalf of others." to="/roles/firm" />
         <DocCard icon="bank" title="Lender" desc="A bank or credit provider lending to SMEs." to="/roles/lender" />
-        <DocCard icon="handshake" title="Broker" desc="An intermediary connecting clients to funding." to="/roles/broker" badge="Soon" />
+        <DocCard icon="handshake" title="Broker" desc="Discover, represent and advise clients with their consent." to="/roles/broker" />
         <DocCard icon="shield" title="Not sure yet?" desc="Start with how the whole platform works." to="/how-it-works" />
       </CardGrid>
 

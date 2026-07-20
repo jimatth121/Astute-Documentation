@@ -241,7 +241,7 @@ const FIRM: Pair[] = [
   ["Return on Investment Multiple", "The multiple of the original investment returned to the firm upon exit (e.g., 3×)."],
   ["SaaS / Cloud", "Software-as-a-Service companies that deliver software over the internet on a subscription basis, often leveraging cloud infrastructure."],
   ["SAFE agreements", "A popular investment type for early-stage startups."],
-  ["Smile Identity", "A third-party provider referenced for identity verification (KYC)."],
+  ["Smile Identity", "A legacy identity-verification provider named in the original PRD; current platform guidance uses ComplyCube."],
   ["Sector", "The category of the economy or industry in which a business operates (e.g., Healthtech, BioTech, Fintech, Deeptech, AI)."],
   ["Set Deal Milestone", "A permission allowing a team member to update the Deal Room milestone (e.g., move from Connected to Negotiation)."],
   ["Team member", "An individual investment professional added to the firm's account."],

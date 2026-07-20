@@ -314,8 +314,10 @@ export function Broker() {
       section="Guides by role"
       toc={[
         { id: "you", label: "Is this you?" },
-        { id: "soon", label: "Coming soon" },
-        { id: "planned", label: "What to expect" },
+        { id: "journey", label: "Your journey" },
+        { id: "marketplace", label: "Marketplace" },
+        { id: "portfolio", label: "Portfolio & AI" },
+        { id: "limits", label: "Current boundaries" },
       ]}
     >
       <RoleHero
@@ -328,32 +330,31 @@ export function Broker() {
 
       <H2 id="you">Is this you?</H2>
       <p>
-        You manage relationships with multiple businesses and match them to the right lenders or
-        investors. Astute will let you do that from one dashboard — with each client's consent and
-        documents in order.
+        You professionally represent businesses, investors or lenders and want one place to discover
+        suitable clients, obtain consent, manage a portfolio and improve how opportunities are packaged.
       </p>
 
-      <H2 id="soon">Coming soon</H2>
-      <Callout type="warn" title="Not available yet">
-        The broker experience is planned but not switched on yet. You can see the role during
-        sign-up, but the client and submission tools are still being built. This page previews what's
-        coming.
-      </Callout>
-
-      <H2 id="planned">What to expect</H2>
+      <H2 id="journey">Your journey</H2>
       <JourneyExplorer
         steps={[
-          { label: "Sign up", tier: "basic", title: "Register & verify phone", desc: "Choose Broker, confirm your email and mobile.", points: ["Verify your email link", "Enter a 6-digit SMS code to continue"], unlock: "BASIC" },
-          { label: "Credentials", tier: "verified", title: "Verify your credentials", desc: "Prove who you are and your permission to broke.", points: ["Photo ID + a live selfie", "FCA credit-broking permissions checked"], unlock: "VERIFIED" },
-          { label: "Track record", tier: "trusted", title: "Prove your track record", desc: "Show past deals and accept the fee terms.", points: ["Case studies + AML training", "Commission agreement signed"], unlock: "TRUSTED" },
-          { label: "Link clients", tier: "use", title: "Link your clients", desc: "Represent businesses with their consent.", points: ["Invite a client or accept a connection", "Each link needs a signed authorisation"], unlock: "Client board" },
-          { label: "Submit", tier: "use", title: "Submit & facilitate", desc: "Send clients to providers and track every deal.", points: ["Attach documents from the client's vault", "Follow status: Sent → Under Review → Approved"], unlock: "Submissions" },
+          { label: "Profile", tier: "basic", title: "Build your professional profile", desc: "Complete identity, professional and regulatory milestones in any order.", points: ["Add specialisation, preferences and commission model", "Provide references, declarations and agreement"], unlock: "Progress saved" },
+          { label: "Verify", tier: "verified", title: "Complete trust checks", desc: "Pass identity and the checks that apply to your broker type.", points: ["KYC, AML and PEP declarations", "Firm brokers complete company verification"], unlock: "VERIFIED" },
+          { label: "Discover", tier: "use", title: "Open the marketplace", desc: "Specialisation plus deal preferences unlock live-filtered discovery.", points: ["Fund-seekers appear per active request", "Investors and lenders appear; firms do not"], unlock: "Marketplace" },
+          { label: "Represent", tier: "use", title: "Offer representation", desc: "The candidate reviews your credentials and chooses freely.", points: ["Acceptance records consent", "A private representation room opens"], unlock: "Active client" },
+          { label: "Advise", tier: "use", title: "Manage and improve the client", desc: "Review client data, matches and documents from your portfolio.", points: ["See the client's matches read-only", "Generate grounded AI suggestions"], unlock: "Portfolio" },
         ]}
       />
-      <p>
-        Until then, if you're raising for your own business or investing directly, one of the other{" "}
-        <Link to="/">role guides</Link> will fit.
-      </p>
+
+      <H2 id="marketplace">Marketplace</H2>
+      <p>The marketplace uses live hard-filtering rather than stored AI matches. Updating your specialisation changes the next view immediately. Search eligible fund-seekers, investors and lenders, then review the full profile before offering representation.</p>
+
+      <H2 id="portfolio">Portfolio &amp; AI</H2>
+      <p>Your portfolio contains active clients only. It surfaces the client's relevant funding data, compliant document view and existing matches. AI packaging suggestions identify detected gaps, explain their grounding and project their impact; zero suggestions is a valid result.</p>
+
+      <H2 id="limits">Current boundaries</H2>
+      <Callout type="warn" title="Representation, not execution">
+        Brokers cannot yet express interest on a client's behalf, create three-way deal rooms or withdraw a pending representation offer. Use the representation room as the advisory channel; either party can end the relationship.
+      </Callout>
 
       <Helpful />
     </DocPage>

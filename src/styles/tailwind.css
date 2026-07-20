@@ -1,11 +1,12 @@
 @import "tailwindcss";
 
-/* Light theme is opt-in via a `.light` class on <html> (not a media query). */
+/* The light variant remains available to legacy utility classes, but no light
+   token override exists: this documentation is intentionally dark-only. */
 @custom-variant light (&:where(html.light, html.light *));
 
 /* ============================================================
-   Design tokens (source of truth — swapped for light theme).
-   Kept as CSS custom properties so runtime theming works and
+   Design tokens (dark theme source of truth).
+   Kept as CSS custom properties so
    inline `var(--token)` references in components keep resolving.
    ============================================================ */
 :root {
@@ -36,27 +37,9 @@
   color-scheme: dark;
 }
 
-/* Optional light theme (toggle adds .light on <html>) */
-html.light {
-  --dark-bg: #f6f7fb;
-  --surface: #ffffff;
-  --surface-strong: #f1f2f7;
-  --surface-hover: #eceef5;
-  --border: rgba(3, 3, 13, 0.09);
-  --border-strong: rgba(3, 3, 13, 0.16);
-  --text-primary: #1a1a24;
-  --text-bright: #05050d;
-  --text-muted: rgba(10, 10, 20, 0.72);
-  --text-gray: #6a6a72;
-  --text-dim: #9a9aa2;
-  --selected-surface: rgba(1, 183, 171, 0.12);
-  color-scheme: light;
-}
-
 /* ============================================================
    Tailwind theme — maps design tokens to utilities.
-   Colors alias the tokens above (via var) so `bg-surface`,
-   `text-txt-muted`, etc. follow the light/dark swap.
+   Colors alias the dark tokens above via custom properties.
    ============================================================ */
 @theme {
   --color-primary: var(--primary);

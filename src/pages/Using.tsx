@@ -141,9 +141,9 @@ export function UsingMatches() {
       </ul>
 
       <H2 id="interest">Expressing interest</H2>
-      <Callout type="warn" title="You'll need TRUSTED">
-        Only <Pill variant="trusted">TRUSTED</Pill> members can express formal interest and open Deal
-        Rooms. If the button's locked, finish your remaining checks first.
+      <Callout type="info" title="Verification comes first">
+        Tier 1 <Pill variant="verified">VERIFIED</Pill> unlocks matching and interest. Higher tiers
+        add stronger visible trust signals; mutual consent is still required before a Deal Room opens.
       </Callout>
       <p>
         Tap <strong>Express Interest</strong>, add a short note, and send. The other side gets a
@@ -352,9 +352,8 @@ export function UsingBilling() {
     >
       <h1 className="mb-3.5 bg-[linear-gradient(120deg,#fff_30%,var(--primary)_130%)] bg-clip-text font-head text-[40px] font-bold leading-[1.18] text-transparent light:bg-[linear-gradient(120deg,#0a0a14_30%,var(--primary)_140%)] max-[900px]:text-3xl">Plans &amp; billing</h1>
       <p className="mb-[34px] mt-0 max-w-[720px] text-[18.5px] leading-[1.6] text-txt-muted">
-        Astute is a paid platform — you subscribe before you start using it. Fund-seekers get a
-        discount coupon on their subscription (and pay a small 1.5% fee on deals they win); every
-        other role gets a 14-day free trial to explore first.
+        Astute offers Standard and Premium plans, billed monthly or yearly. Fund-seekers pay from
+        day one; capital providers receive a one-time 30-day trial before subscribing.
       </p>
 
       <H2 id="upfront">Pay to get started</H2>
@@ -371,10 +370,10 @@ export function UsingBilling() {
         head={["Role", "How you start"]}
         rows={[
           ["Fund-seeker", <span>Pay upfront with a <strong>discount coupon</strong> applied</span>],
-          ["Investor", <span><strong>14-day free trial</strong>, then subscription</span>],
-          ["Investment firm", <span><strong>14-day free trial</strong>, then subscription</span>],
-          ["Lender", <span><strong>14-day free trial</strong>, then subscription</span>],
-          ["Broker", <span><strong>14-day free trial</strong>, then subscription</span>],
+          ["Investor", <span><strong>30-day free trial</strong> once per person, then subscription</span>],
+          ["Investment firm", <span><strong>30-day free trial</strong> once per person, then subscription</span>],
+          ["Lender", <span><strong>30-day free trial</strong> once per person, then subscription</span>],
+          ["Broker", <span>Subscription access; trial eligibility depends on the current offer</span>],
         ]}
       />
 
@@ -392,10 +391,9 @@ export function UsingBilling() {
 
       <H2 id="others">Everyone else</H2>
       <p>
-        Investors, investment firms, lenders and brokers start with a <strong>14-day free
-        trial</strong>. Explore the whole platform, and your subscription only begins when the trial
-        ends — cancel any time before then and you won't be charged. These roles pay their
-        subscription only; there's no success fee.
+        Investors, investment firms and lenders receive a <strong>one-time 30-day free trial</strong>.
+        Trials have no grace period. Grace applies only after a paid subscription later lapses;
+        trial-expired and never-subscribed users are routed to pricing.
       </p>
 
       <H2 id="success-fee">The 1.5% success fee</H2>
@@ -566,10 +564,9 @@ export function UsingAssistant() {
       </Callout>
 
       <H2 id="who">Who can use it</H2>
-      <Callout type="note" title="Fund-seekers today">
-        The AI Assistant is currently built for <strong>fund-seekers</strong>, where guidance matters
-        most on the journey to fundable. If you don't see the chat button, it isn't enabled for your
-        role yet.
+      <Callout type="note" title="Available across the main roles">
+        AI chat supports fund-seekers, investors, investment firms, lenders and brokers. Visibility
+        can still depend on plan entitlements, remaining credits and the environment's feature switch.
       </Callout>
 
       <Helpful />
